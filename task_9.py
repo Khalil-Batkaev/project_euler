@@ -20,3 +20,16 @@ for a in range(A, RESULT, A):
             print(a * b * c) 
             break   
        
+"""
+Решение через формулу Эвклида для генерации троек: a=m^2-n^2, b=2mn, c=m^2+n^2. При условии, что a+b+c = 1000, m и n не могут быть больше 21-25 где-то
+"""
+
+for m in range(21):
+    for n in range(21):
+        if m >= n:
+            a = m**2 - n**2
+            b = 2 * m * n
+            c = m**2 + n**2
+            if a + b + c == 1000:
+                print(a * b * c)
+                
